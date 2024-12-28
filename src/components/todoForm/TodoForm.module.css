@@ -1,0 +1,28 @@
+.TodoForm{
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+}
+
+
+
+input, select {
+    padding: 15px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 1px solid #ddd ;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.create {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:320px) {
+    .h1 {
+        font-size: 22px;
+    }
+}
