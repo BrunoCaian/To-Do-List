@@ -1,9 +1,10 @@
 .TodoForm{
     gap: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #0000000f;
     border-radius: 8px;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 
@@ -17,8 +18,12 @@ input, select {
     width: 100%;
 }
 
-.create {
+#create {
     margin-bottom: 20px;
+}
+
+.btn {
+    padding: 6px;
 }
 
 @media screen and (max-width:320px) {

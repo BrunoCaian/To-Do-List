@@ -1,5 +1,8 @@
 body {
-    background: linear-gradient(135deg, #333333, #444444, #555555);
+    background-image: url("https://images.unsplash.com/photo-1518933165971-611dbc9c412d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     font-family: "Roboto", serif;
     border-color: #f4f4f4;
@@ -9,7 +12,7 @@ body {
 .app {
     max-width: 600px;
     margin: 0 auto 300px;
-    background-color: #efefeff1;
+    background-color: #efefefbf;
     padding: 20px 30px;
     border-radius: 10px;
     opacity: 0;

@@ -6,12 +6,17 @@ import { useAuth } from './AuthProvider';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import { useEffect, useState } from 'react';
+import Search from './components/search/Search';
+import Filter from './components/filter/Filter';
 
 function App() {
   const { currentUser, loading, logout } = useAuth();
   const { todos, addTodo, removeTodo, completeTodo } = useTarefaList();
   const [showLogin, setShowLogin] = useState(true); 
   const [loaded, setLoaded] = useState(false);
+  const [search, setSearch] = useState('')
+  const [filter, setFilter] = useState('All')
+  const [sort, setSort] = useState('Asc')
 
   const toggleForm = () => {
     setShowLogin((prevShowLogin) => !prevShowLogin);
@@ -47,8 +52,21 @@ function App() {
         <>
           <TodoForm addTodo={addTodo} />
           {todos.length > 0 && <h2>Lista de tarefas</h2>}
+          {todos.length > 0 && <Search search={search} setSearch={setSearch}/>}
+          {todos.length > 0 && <Filter filter={filter} setFilter={setFilter} setSort={setSort}/>}
           <div className="todo-list">
-            {todos.map((todo) => (
+            {todos
+            .filter(
+              (todo) => filter === 'All' ? true : filter === 'Completed' ? todo.completed : !todo.completed
+            )
+            .sort(
+              (a, b) => sort === 'Asc' ? a.text.localeCompare(b.text) : b.text.localeCompare(a.text)
+            )
+            .filter(
+              (todo) => todo.text.toLowerCase().includes(search.toLowerCase()
+            )
+            ).map(
+              (todo) => (
               <Todo
                 key={todo.id}
                 todo={todo}

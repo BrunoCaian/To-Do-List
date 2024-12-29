@@ -45,7 +45,7 @@ export default function TodoForm({ addTodo }) {
                         <option key={index} value={cat}>{cat}</option>
                     ))}
                 </select>
-                <button className={styles.create} type="submit">Criar tarefa</button>
+                <button className={styles.btn} id={styles.create} type="submit">Criar tarefa</button>
             </form>
             <form onSubmit={handleAddCategory}>
                 <input
@@ -54,7 +54,7 @@ export default function TodoForm({ addTodo }) {
                     value={newCategory}
                     onChange={(e) => setNewCategory(e.target.value)}
                 />
-                <button type='submit'>Adicionar Categoria</button>
+                <button className={styles.btn} type='submit'>Adicionar Categoria</button>
             </form>
         </div>
     )
