@@ -14,14 +14,12 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    margin-bottom: 5px;
     overflow-x: hidden;
 }
 
 .app {
     max-width: 700px;
-    margin: 0 auto 300px;
-    margin-top: 5px;
+    margin: 0 auto ;
     background-color: #efefefbf;
     padding: 20px 30px;
     border-radius: 10px;
@@ -29,12 +27,13 @@ body {
     transition: opacity 0.5s ease-in;
 }
 
+
 .centered {
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
 }
 
 .logout {
