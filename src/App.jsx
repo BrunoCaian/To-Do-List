@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className={`app ${loaded ? 'loaded' : ''}`}>
+    <div className={`app ${loaded ? 'loaded' : ''} ${!currentUser ? 'centered' : ''}`}>
       <div className='logout'>
         {currentUser && (
           <button onClick={handleLogout} className='logout-btn'>Sair</button>

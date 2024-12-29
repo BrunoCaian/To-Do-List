@@ -45,7 +45,7 @@ const Login = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div style={style}>
+    <div className={style.container}>
       <h2>Login</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {success && <p style={{ color: 'green' }}>{success}</p>}
